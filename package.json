@@ -1,0 +1,61 @@
+{
+  "name": "madmin-vuejs",
+  "version": "1.0.0",
+  "description": "Material Admin Panel using Vue.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/.bin/webpack",
+    "dev": "node_modules/.bin/webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hynding/madmin-vuejs.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hynding/madmin-vuejs/issues"
+  },
+  "homepage": "https://github.com/hynding/madmin-vuejs#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.28.7",
+    "cucumber": "^3.0.3",
+    "eslint": "^4.8.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.9.0",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "html-webpack-template": "^5.6.0",
+    "node-sass": "^4.5.3",
+    "sass-lint": "^1.12.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "vue-loader": "^13.0.5",
+    "vue-template-compiler": "^2.4.4",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  },
+  "dependencies": {
+    "vue": "^2.4.4",
+    "vue-material": "^0.7.5",
+    "vue-router": "^2.7.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "rules": {
+      "no-console": 0,
+      "no-undef": 0
+    },
+    "extends": "eslint:recommended"
+  }
+}
