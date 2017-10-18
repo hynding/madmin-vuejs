@@ -1,0 +1,4 @@
+# Rules: https://stylelint.io/user-guide/example-config/
+extends: stylelint-config-standard #https://github.com/stylelint/stylelint-config-standard/blob/master/index.js
+rules:
+  indentation: 2

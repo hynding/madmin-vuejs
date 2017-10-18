@@ -19,4 +19,11 @@ export class LayoutMainController {
       }
     }
   }
+
+  data() {
+    console.log('data!');
+    return {
+      drawer: true
+    }
+  }
 }

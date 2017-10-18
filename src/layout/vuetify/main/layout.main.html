@@ -1,0 +1,28 @@
+<v-app>
+    <v-layout>
+        <v-toolbar v-model="drawer">
+            <v-btn class="md-icon-button" @click.stop="drawer!=drawer">
+                <v-icon>menu</v-icon>
+            </v-btn>
+            <h2 class="md-title">Basic</h2>
+        </v-toolbar>
+        <ul>
+            <li><router-link to="/">/</router-link></li>
+            <!--<li><router-link to="/foo">/foo</router-link></li>-->
+            <!--<li><router-link to="/bar">/bar</router-link></li>-->
+            <!--<router-link tag="li" to="/bar" :event="['mousedown', 'touchstart']">-->
+            <!--<a>/bar</a>-->
+            <!--</router-link>-->
+        </ul>
+        <v-navigation-drawer class="md-left" ref="leftSidenav"  @click.stop="drawer!=drawer">
+            <v-toolbar class="md-large">
+                <div class="md-toolbar-container">
+                    <h3 class="md-title">Sidenav content</h3>
+                </div>
+            </v-toolbar>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate esse necessitatibus beatae nobis, deserunt ut est fugit, tempora deleniti, eligendi commodi doloribus. Nemo, assumenda possimus, impedit inventore perferendis iusto!</p>
+
+        </v-navigation-drawer>
+        <router-view class="view"></router-view>
+    </v-layout>
+</v-app>

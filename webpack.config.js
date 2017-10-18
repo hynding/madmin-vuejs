@@ -2,9 +2,11 @@ const path = require('path');
 const {name} = require('./package');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const HtmlWebpackTemplate = require('html-webpack-template');
 const ESLintFriendlyFormatter = require('eslint-friendly-formatter');
 const resolvePath = basePath => path.resolve(__dirname, basePath);
+const layoutPackage = process.env.LAYOUT || 'vue-material';
 
 return module.exports = {
   entry: './src/index.js',
@@ -15,7 +17,8 @@ return module.exports = {
   },
   resolve: {
     alias: {
-
+      $layout$: layoutPackage,
+      $layout: resolvePath(`src/layout/${layoutPackage}`),
       vue$: 'vue/dist/vue.esm.js',
       lib: resolvePath('lib')
     }
@@ -47,10 +50,14 @@ return module.exports = {
         '//fonts.googleapis.com/icon?family=Material+Icons'
       ],
       appMountId: 'app'
-    })
+    }),
+    new StyleLintPlugin({
+      configFile: resolvePath('config/stylelint.config.yaml'),
+      files: ['src/**/*.s?(a|c)ss']
+    }),
   ],
   devServer: {
     contentBase: './build',
-    port: 5000
+    port: 25489 //BLITZ on numpad
   }
 };

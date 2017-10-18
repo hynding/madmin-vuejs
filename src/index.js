@@ -1,13 +1,14 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import VueMaterial from 'vue-material';
-import 'vue-material/dist/vue-material.css';
+import VueLayout from '$layout'; // See webpack config alias for layout
 
-import LayoutModule from './layout/layout.module';
+import LayoutModule from '$layout/layout.module';
 import UserModule from './user/user.module';
 
+import '$layout/layout.scss';
+
 Vue.use(VueRouter);
-Vue.use(VueMaterial);
+Vue.use(VueLayout);
 
 new Vue({el: '#app',
   router:new VueRouter({
